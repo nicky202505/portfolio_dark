@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Front-End Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="logo-container">
+                    <div class="hexagon">
+                        <div class="hexagon-inner">
+                            <div class="hexagon-face"></div>
+                            <div class="hexagon-face"></div>
+                            <div class="hexagon-face"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">6단계 분석</span>
+                        <span class="title-line">Front-End 개발자</span>
+                        <span class="title-line">UX/UI 개발자</span>
+                        <span class="title-line gradient-text">입맞춤디자인</span>
+                    </h1>
+                    <div class="hero-links">
+                        <a href="https://github.com" class="btn btn-primary" target="_blank">
+                            GitHub
+                        </a>
+                        <a href="https://notion.so" class="btn btn-secondary" target="_blank">
+                            Notion
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="profile-image-wrapper">
+                    <div class="profile-glow"></div>
+                    <div class="profile-image">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="95" fill="#1a1a2e" stroke="url(#gradient)" stroke-width="3"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff006e;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">ABOUT ME</h2>
+                    <p class="section-subtitle">6+ STRENGTHS</p>
+                    <div class="strengths-grid">
+                        <div class="strength-tag">
+                            <span class="tag-icon">🎨</span>
+                            <span>UI/UX</span>
+                        </div>
+                        <div class="strength-tag">
+                            <span class="tag-icon">⚡</span>
+                            <span>반응형</span>
+                        </div>
+                        <div class="strength-tag">
+                            <span class="tag-icon">💡</span>
+                            <span>디자인</span>
+                        </div>
+                        <div class="strength-tag">
+                            <span class="tag-icon">🚀</span>
+                            <span>최적화</span>
+                        </div>
+                        <div class="strength-tag">
+                            <span class="tag-icon">🎯</span>
+                            <span>사용성</span>
+                        </div>
+                        <div class="strength-tag">
+                            <span class="tag-icon">✨</span>
+                            <span>소통</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section class="resume" id="resume">
+        <div class="container">
+            <h2 class="section-title">RESUME</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineer - 대기업 계열사</h3>
+                        <p class="timeline-period">2020.03 ~ 현재</p>
+                        <p>Shinsegae 그룹 계열사의 Spharos 랩에서 소프트웨어 엔지니어로 재직 중입니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>반응형 모바일 개발, Front-end 주 업무 수행</h3>
+                        <p class="timeline-period">2018.06 ~ 2020.02</p>
+                        <p>프리랜서로 다양한 웹 프로젝트와 앱 개발 경험을 쌓았습니다.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>ICT 이노베이션 스퀘어 종사 - 교육과 프로젝트 진행</h3>
+                        <p class="timeline-period">2016 ~ 2018</p>
+                        <p>React, JavaScript를 활용한 여러 프로젝트를 진행하며 실무 경험을 쌓았습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">PORTFOLIO</h2>
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-mockup mockup-1">
+                            <div class="mockup-screen"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">MOBILE APP DEVELOPMENT</h3>
+                        <p class="project-desc">
+                            React Native, 스웨덴 전기 배달 e-bike<br>
+                            지도 앱을 활용 사용하게끔
+                        </p>
+                        <a href="https://github.com/xxxcrow/xxxx.git" class="project-link" target="_blank">
+                            https://github.com/xxxcrow/xxxx.git
+                        </a>
+                        <button class="btn btn-project">프로젝트 자세히 보기</button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-mockup mockup-2">
+                            <div class="mockup-icon">S</div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">MOBILE APP DEVELOPMENT</h3>
+                        <p class="project-desc">
+                            React Native, 스 청구 현황 어플리케이션<br>
+                            지금 보면 더욱 사용하기쉽도록
+                        </p>
+                        <a href="https://github.com/xxxxcrow/xxxx.git" class="project-link" target="_blank">
+                            https://github.com/xxxxcrow/xxxx.git
+                        </a>
+                        <button class="btn btn-project">프로젝트 자세히 보기</button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-visual">
+                        <div class="project-mockup mockup-3">
+                            <div class="mockup-screen-split">
+                                <div class="screen-left"></div>
+                                <div class="screen-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">MOBILE APP DEVELOPMENT</h3>
+                        <p class="project-desc">
+                            React Native, 스 청구 현황 어플리케이션<br>
+                            지금 보면 더욱 사용하기쉽도록
+                        </p>
+                        <a href="https://github.com/xxxxcrow/xxxx.git" class="project-link" target="_blank">
+                            https://github.com/xxxxcrow/xxxx.git
+                        </a>
+                        <button class="btn btn-project">프로젝트 자세히 보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <h2 class="section-title">CONTACTS</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:contact@example.com">contact@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com" target="_blank">linkedin.com/in/yourprofile</a>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone</h3>
+                    <a href="tel:+821012345678">+82 10-1234-5678</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
