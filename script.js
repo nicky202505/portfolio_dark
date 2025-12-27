@@ -1,3 +1,104 @@
+// Project Modal Logic
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('project-modal');
+  const closeBtn = document.querySelector('.project-modal-close');
+  const btns = document.querySelectorAll('.btn-project-open');
+  const modalBody = document.getElementById('project-modal-body');
+
+  // 각 프로젝트별 상세 내용
+  const projectContents = {
+    1: `
+      <h2>FREESIA - AI 감정 코칭 서비스</h2>
+      <div style="width:600px;max-width:100%;margin:1.5rem auto;">
+        <iframe width="600" height="338"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="FREESIA 소개 영상"
+          frameborder="0"
+          allowfullscreen
+          style="display:block;margin:0 auto;border-radius:16px;">
+        </iframe>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
+        <a href="https://freesia-psi.vercel.app" target="_blank" class="btn btn-primary">앱 사용하기</a>
+        <a href="https://github.com/nicky202505/freesia" target="_blank" class="btn btn-secondary">GitHub</a>
+        <a href="#" target="_blank" class="btn btn-project">기획서</a> 
+      </div>
+    `,
+    2: `
+      <h2>신세계 백화점 클론 코딩</h2>
+      <div style="width:600px;max-width:100%;margin:1.5rem auto;">
+        <iframe width="600" height="338"
+          src="img/depart.mp4" 
+          title="신세계 백화점 클론 영상"
+          frameborder="0"
+          allowfullscreen
+          style="display:block;margin:0 auto;border-radius:16px;">
+        </iframe>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
+        <a href="https://nicky202505.github.io/project03/" target="_blank" class="btn btn-primary">바로보기</a>
+        <a href="https://github.com/nicky202505/project03" target="_blank" class="btn btn-secondary">GitHub</a>    
+      </div>
+      <p style="margin-top:1.5rem;">
+        최고급 백화점 웹사이트의 화려한 무드와 스킬을 그대로 구현.<br>
+        다양한 UI/UX와 반응형 웹 기술 적용.
+      </p>
+    `,
+    3: `
+      <h2>UggBooks UX/UI 개발</h2>
+      <div style="width:600px;max-width:100%;margin:1.5rem auto;">
+        <iframe width="600" height="338"
+          src="img/ugg_final.mp4"
+          title="UggBooks UX/UI 영상"
+          frameborder="0"
+          allowfullscreen
+          style="display:block;margin:0 auto;border-radius:16px;">
+        </iframe>
+      </div>
+      <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
+        <a href="#" target="_blank" class="btn btn-primary">프로토타입</a>
+        <a href="#" target="_blank" class="btn btn-secondary">기획서</a>
+        <a href="#" target="_blank" class="btn btn-project">디자인</a>
+      </div>
+      <p style="margin-top:1.5rem;">
+        독서 관리 솔루션 UggBooks의 UX/UI를 개발하여 Figma 프로토타입으로 구현.<br>
+        사용자 중심의 인터페이스 설계.
+      </p>
+    `
+  };
+
+    // 모달 오픈/클로즈 로직
+    btns.forEach((btn, idx) => {
+        btn.addEventListener('click', function () {
+            const projectNum = idx + 1;
+            modalBody.innerHTML = projectContents[projectNum] || '<p>프로젝트 정보를 찾을 수 없습니다.</p>';
+            modal.classList.add('open');
+            modal.style.display = 'flex'; // display를 flex로 변경
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // 닫기 버튼
+    closeBtn.addEventListener('click', function () {
+        modal.classList.remove('open');
+        modal.style.display = 'none'; // display를 none으로 변경
+        document.body.style.overflow = '';
+        modalBody.innerHTML = '';
+    });
+
+    // 모달 바깥 클릭 시 닫기
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.classList.remove('open');
+            modal.style.display = 'none'; // display를 none으로 변경
+            document.body.style.overflow = '';
+            modalBody.innerHTML = '';
+        }
+    });
+});
+
+
+
 // Resume tab interaction
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.resume-tab');
