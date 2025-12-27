@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <section class="header_wrap"> 
+        <div class="header_inner">  
+                <div class="header-grid">
+                        <a class="header-col" href="#home">HOME</a>
+                        <a class="header-col" href="#about">ABOUT ME</a>
+                        <a class="header-col" href="#resume">RESUME</a>
+                        <a class="header-col" href="#portfolio">PORTFOLIO</a>
+                        <a class="header-col" href="#contacts">CONTACTS</a>                      
+                </div>
+        </div>
+
+    </div>
+
+  </section> 
+
+ 
+
+    </div>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -25,17 +44,18 @@
                 </div>
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="title-line">6단계 분석</span>
-                        <span class="title-line">Front-End 개발자</span>
-                        <span class="title-line">UX/UI 개발자</span>
-                        <span class="title-line gradient-text">입맞춤디자인</span>
+                        <span class="title-line">6각형 개발자</span>
+                        <span class="title-line">Front-End</span>                    
+                        <span class="title-line">Design</span>
+                        <span class="title-line">Publishing</span>
+                        <span class="title-line">UX/UI</span>                     
                     </h1>
                     <div class="hero-links">
                         <a href="https://github.com" class="btn btn-primary" target="_blank">
-                            GitHub
+                            RESUME
                         </a>
                         <a href="https://notion.so" class="btn btn-secondary" target="_blank">
-                            Notion
+                            GitHub
                         </a>
                     </div>
                 </div>
@@ -51,14 +71,25 @@
                     <div class="profile-glow"></div>
                     <div class="profile-image">
                         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="95" fill="#1a1a2e" stroke="url(#gradient)" stroke-width="3"/>
-                            <defs>
-                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:#ff006e;stop-opacity:1" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+  <defs>
+    <clipPath id="circleView">
+      <circle cx="100" cy="100" r="95"/>
+    </clipPath>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff006e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- 원형 이미지 -->
+  <image 
+    href="img/portrait.png" 
+    x="5" y="5" width="190" height="190" 
+    clip-path="url(#circleView)" 
+    preserveAspectRatio="xMidYMid slice"
+  />
+  <!-- 원형 테두리 -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#gradient)" stroke-width="3"/>
+</svg>
                     </div>
                 </div>
                 <div class="about-details">
@@ -67,11 +98,11 @@
                     <div class="strengths-grid">
                         <div class="strength-tag">
                             <span class="tag-icon">🎨</span>
-                            <span>UI/UX</span>
+                            <span>개발</span>
                         </div>
                         <div class="strength-tag">
                             <span class="tag-icon">⚡</span>
-                            <span>반응형</span>
+                            <span>UX/UI</span>
                         </div>
                         <div class="strength-tag">
                             <span class="tag-icon">💡</span>
@@ -79,7 +110,7 @@
                         </div>
                         <div class="strength-tag">
                             <span class="tag-icon">🚀</span>
-                            <span>최적화</span>
+                            <span>생산성</span>
                         </div>
                         <div class="strength-tag">
                             <span class="tag-icon">🎯</span>
@@ -99,30 +130,28 @@
     <section class="resume" id="resume">
         <div class="container">
             <h2 class="section-title">RESUME</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer - 대기업 계열사</h3>
-                        <p class="timeline-period">2020.03 ~ 현재</p>
-                        <p>Shinsegae 그룹 계열사의 Spharos 랩에서 소프트웨어 엔지니어로 재직 중입니다.</p>
-                    </div>
+            <div class="resume-tabs">
+                <button class="resume-tab active" data-tab="bio">BIOGRAPHY</button>
+                <button class="resume-tab" data-tab="skills">SKILLS</button>
+                <button class="resume-tab" data-tab="education">EDUCATION</button> 
+                <button class="resume-tab" data-tab="career">CAREER</button>  
+            </div>
+            <div class="resume-contents">
+                <div class="resume-content-box active" data-content="bio">
+                    <h3>Biography</h3>
+                    <p>자기소개, 경력 요약 등 주요 이력 정보를 입력하세요.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>반응형 모바일 개발, Front-end 주 업무 수행</h3>
-                        <p class="timeline-period">2018.06 ~ 2020.02</p>
-                        <p>프리랜서로 다양한 웹 프로젝트와 앱 개발 경험을 쌓았습니다.</p>
-                    </div>
+                <div class="resume-content-box" data-content="skills">
+                    <h3>Skills</h3>
+                    <p>보유 기술 및 역량을 입력하세요.</p>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>ICT 이노베이션 스퀘어 종사 - 교육과 프로젝트 진행</h3>
-                        <p class="timeline-period">2016 ~ 2018</p>
-                        <p>React, JavaScript를 활용한 여러 프로젝트를 진행하며 실무 경험을 쌓았습니다.</p>
-                    </div>
+                <div class="resume-content-box" data-content="education">
+                    <h3>Education</h3>
+                    <p>학력 정보를 입력하세요.</p>
+                </div>
+                <div class="resume-content-box" data-content="career">
+                    <h3>Career</h3>
+                    <p>경력 및 주요 프로젝트를 입력하세요.</p>
                 </div>
             </div>
         </div>

@@ -1,3 +1,22 @@
+// Resume tab interaction
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.resume-tab');
+    const contentBoxes = document.querySelectorAll('.resume-content-box');
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            const tab = this.getAttribute('data-tab');
+            contentBoxes.forEach(box => {
+                if (box.getAttribute('data-content') === tab) {
+                    box.classList.add('active');
+                } else {
+                    box.classList.remove('active');
+                }
+            });
+        });
+    });
+});
 // Smooth scroll reveal animations
 const observerOptions = {
     threshold: 0.1,

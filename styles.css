@@ -1,3 +1,54 @@
+/* Resume 4-column content */
+.resume-contents {
+    margin-top: 2rem;
+}
+.resume-content-box {
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.08);
+    border-radius: 18px;
+    padding: 2rem 1.2rem;
+    color: var(--color-text-primary);
+    box-shadow: 0 2px 12px rgba(0, 212, 255, 0.07);
+    display: none;
+    min-height: 120px;
+    transition: var(--transition-smooth);
+}
+.resume-content-box.active {    
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+/* Resume Tabs */
+.resume-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+}
+
+.resume-tab {
+    background: rgba(0, 212, 255, 0.08);
+    color: var(--color-text-primary);
+    border: none;
+    border-radius: 20px;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.resume-tab.active,
+.resume-tab:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(0, 212, 255, 0.15);
+}
+
 :root {
     /* Color Palette */
     --color-primary: #00d4ff;
@@ -11,7 +62,7 @@
     --color-text-muted: #6b6b8d;
     
     /* Typography */
-    --font-display: 'Playfair Display', serif;
+    --font-display: 'Pretendard', sans-serif;
     --font-body: 'DM Sans', sans-serif;
     
     /* Spacing */
@@ -64,13 +115,71 @@ body::before {
 @keyframes gridMove {
     0% { transform: translate(0, 0); }
     100% { transform: translate(50px, 50px); }
+} 
+
+
+.header_wrap{ 
+    max-width: 1920px; 
+     /* background-color:  rgba(0, 212, 255, 0.3);  */
+    height: 82px;  
+    position: fixed;    
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* 중앙 정렬을 위한 속성 추가 */
+    width: 100%;
+    z-index: 101;
+} 
+
+.header_inner {
+    max-width: 1400px;  
+    height: 100%; 
+     /* background-color: #ffffff;  */
+      background-color:  #0a1a2e    ;   
+      margin-left: auto;
+    margin-right: auto; 
+    z-index: 101;  
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12), 0 1.5px 6px rgba(0, 212, 255, 0.08);
+} 
+
+/* Header 6-column grid */
+.header_inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+   
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1400px;
+    height: 82px;
+    align-items: center;  
+
+}
+
+.header-col {
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+    text-decoration: none;
 }
 
 .container {
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
-}
+} 
+
+
 
 /* Hero Section */
 .hero {
@@ -138,8 +247,8 @@ body::before {
 
 .hexagon-face {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     left: 50%;
@@ -192,7 +301,7 @@ body::before {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 3.2rem);
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: var(--spacing-md);
@@ -203,10 +312,12 @@ body::before {
     animation: slideUp 0.8s ease-out backwards;
 }
 
+
 .title-line:nth-child(1) { animation-delay: 0.2s; }
 .title-line:nth-child(2) { animation-delay: 0.4s; }
 .title-line:nth-child(3) { animation-delay: 0.6s; }
 .title-line:nth-child(4) { animation-delay: 0.8s; }
+.title-line:nth-child(5) { animation-delay: 1.0s; }
 
 @keyframes slideUp {
     from {
