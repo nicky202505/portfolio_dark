@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
       </div> 
 
      <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
-  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : AI를 통해 감정 코칭을 제공하는 모바일 앱 FREESIA</h4>
-  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : React, Javascript, Typescript, HTML/CSS, FIGMA</h4>
+  <h4 style="background-color:#f2f2f2; color:#333; border-radius: 4px; ">프로젝트 명칭 및 개요 : AI를 통해 감정 코칭을 제공하는 모바일 앱 FREESIA <br>
+  기술 스택 : React, Javascript, Typescript, HTML/CSS, FIGMA</h4>
   <h4>개발 목표 : 바쁜 일상 속에서 감정의 변화를 인지하고 부정적 감정을 빠르게 해소하도록 도움으로써 일과 생활을 윤택하게 함</h4>
 
   <h4> 주요 성능 : 사용자가 감정 상태를 간단한 단어로 입력하면 AI가 그에 맞는 객관화 분석과 솔루션을 제공하며, 대화 히스토리 자동 저장 및 통계 서비스를 통해 개인 감정관리가 가능하도록 함</h4>
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="https://github.com/nicky202505/project03" target="_blank" class="btn btn-secondary">GitHub</a>    
       </div> 
            <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
-  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : 신세계 백화점 웹사이트를 클론 코딩 </h4>
-  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : JavaScript / GSAP / Swiper / Responsive Design </h4>  
+  <h4 style="background-color:#f2f2f2; color:#333; border-radius: 4px; ">프로젝트 명칭 및 개요 : 신세계 백화점 웹사이트를 클론 코딩 <br>
+  기술 스택 : JavaScript / GSAP / Swiper / Responsive Design </h4>  
   <h4>프로젝트 목표: 고급 백화점의 화려한 이미지를 구현하고 있는 사이트의 구조와 디자인을 분석하면서 실제 상용 사이트 수준의 구조 설계와 인터랙션 로직을 익혔습니다. 특히 GSAP 애니메이션 타이밍 조절과 반응형 대응을 통해 디자인 완성도를 높이는 경험을 했습니다. </h4>     
   <h4>주요 성능 : 비디오 배너와 동적 텍스트 전환 효과 / 헤더 고정 및 스크롤 시 인터랙션 / GSAP 타임라인을 통한 자연스러운 섹션 트랜지션  
 
@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
    
       </div>
    <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
-  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : 독서 관리 솔루션 UGGBOOKS </h4>
-  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : FIGMA / Adobe Tools </h4>  
-  <h4>프로젝트 목표: 모바일 앱 개발을 전제로 독서 완독을 지원하는 모바일 UX를 개발하였으며, 아이디어 구상 및 기획부터 피그마 디자인 및 프로토타입까지 완성! </h4>     
+  <h4 style="background-color:#f2f2f2; color:#333;">프로젝트 명칭 및 개요 : 독서 관리 솔루션 UGGBOOKS <br> 
+ 기술 스택 : FIGMA / Adobe Tools   </h4>
+  <h4> 프로젝트 목표: 모바일 앱 개발을 전제로 독서 완독을 지원하는 모바일 UX를 개발하였으며, 아이디어 구상 및 기획부터 피그마 디자인 및 프로토타입까지 완성! </h4>     
   <h4>주요 성능 : 사용자가 원하는 도서의 등록, 독서 타이머, 완독률 관리, 통계까지 독서 애호가의 모든 니즈를 포함할 수 있는 UX 개발 <br> 
   향후 API 연동을 포함한 추가 개발을 통해 실제 Application 개발이 가능하도록 준비 완료 </h4>   
 </div> 
@@ -122,9 +122,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // '기획서' 버튼 (프로젝트 1)
             if (e.target && e.target.classList.contains('btn-project')) {
                 e.preventDefault();
-                showFigmaEmbedModal('https://embed.figma.com/slides/bquYeDgDzDgJVoBVNSUhRK/freesia-%EC%95%B1-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%ED%9A%8D%EC%84%9C?node-id=1-483&embed-host=share');
+                showFigmaEmbedModal('https://embed.figma.com/slides/bquYeDgDzDgJVoBVNSUhRK/freesia-%EC%95%B1-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%ED%9A%8D%EC%84%9C?node-id=1-26&embed-host=share');
             }
-            // '앱 사용해보기' 버튼 (프로젝트 3) 임베드 
+            // '앱 사용해보기' 버튼 (프로젝트 3) 임베드  
        
             if (
                 e.target &&
