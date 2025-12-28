@@ -1,5 +1,23 @@
 // Project Modal Logic
 document.addEventListener('DOMContentLoaded', function () {
+    // Skill Progress Animation
+    function animateSkillCircles() {
+        const skillCircles = document.querySelectorAll('.skill-circle');
+        skillCircles.forEach(circle => {
+            const percent = parseInt(circle.getAttribute('data-percent'), 10) || 0;
+            const progressBar = circle.querySelector('.progress-ring-bar');
+            const radius = progressBar.r.baseVal.value;
+            const circumference = 2 * Math.PI * radius;
+            progressBar.style.strokeDasharray = `${circumference}`;
+            progressBar.style.strokeDashoffset = `${circumference}`;
+            // Animate
+            setTimeout(() => {
+                progressBar.style.transition = 'stroke-dashoffset 1.2s ease';
+                progressBar.style.strokeDashoffset = `${circumference * (1 - percent / 100)}`;
+            }, 300);
+        });
+    }
+    animateSkillCircles();
   const modal = document.getElementById('project-modal');
   const closeBtn = document.querySelector('.project-modal-close');
   const btns = document.querySelectorAll('.btn-project-open');
@@ -11,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <h2>FREESIA - AI 감정 코칭 서비스</h2>
       <div style="width:600px;max-width:100%;margin:1.5rem auto;">
         <iframe width="600" height="338"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          src="img/freesia.mp4"
           title="FREESIA 소개 영상"
           frameborder="0"
           allowfullscreen
@@ -19,10 +37,21 @@ document.addEventListener('DOMContentLoaded', function () {
         </iframe>
       </div>
       <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
-        <a href="https://freesia-psi.vercel.app" target="_blank" class="btn btn-primary">앱 사용하기</a>
+                <a href="https://freesia-psi.vercel.app" target="_blank" class="btn btn-primary">앱 사용하기</a>
         <a href="https://github.com/nicky202505/freesia" target="_blank" class="btn btn-secondary">GitHub</a>
         <a href="#" target="_blank" class="btn btn-project">기획서</a> 
-      </div>
+      </div> 
+
+     <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
+  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : AI를 통해 감정 코칭을 제공하는 모바일 앱 FREESIA</h4>
+  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : React, Javascript, Typescript, HTML/CSS, FIGMA</h4>
+  <h4>개발 목표 : 바쁜 일상 속에서 감정의 변화를 인지하고 부정적 감정을 빠르게 해소하도록 도움으로써 일과 생활을 윤택하게 함</h4>
+
+  <h4> 주요 성능 : 사용자가 감정 상태를 간단한 단어로 입력하면 AI가 그에 맞는 객관화 분석과 솔루션을 제공하며, 대화 히스토리 자동 저장 및 통계 서비스를 통해 개인 감정관리가 가능하도록 함</h4>
+    <h4>타겟 사용자 : 사무직 노동자, 감정 노동자, 서비스 종사자</h4> 
+</div> 
+
+
     `,
     2: `
       <h2>신세계 백화점 클론 코딩</h2>
@@ -38,45 +67,134 @@ document.addEventListener('DOMContentLoaded', function () {
       <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
         <a href="https://nicky202505.github.io/project03/" target="_blank" class="btn btn-primary">바로보기</a>
         <a href="https://github.com/nicky202505/project03" target="_blank" class="btn btn-secondary">GitHub</a>    
-      </div>
-      <p style="margin-top:1.5rem;">
-        최고급 백화점 웹사이트의 화려한 무드와 스킬을 그대로 구현.<br>
-        다양한 UI/UX와 반응형 웹 기술 적용.
-      </p>
+      </div> 
+           <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
+  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : 신세계 백화점 웹사이트를 클론 코딩 </h4>
+  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : JavaScript / GSAP / Swiper / Responsive Design </h4>  
+  <h4>프로젝트 목표: 고급 백화점의 화려한 이미지를 구현하고 있는 사이트의 구조와 디자인을 분석하면서 실제 상용 사이트 수준의 구조 설계와 인터랙션 로직을 익혔습니다. 특히 GSAP 애니메이션 타이밍 조절과 반응형 대응을 통해 디자인 완성도를 높이는 경험을 했습니다. </h4>     
+  <h4>주요 성능 : 비디오 배너와 동적 텍스트 전환 효과 / 헤더 고정 및 스크롤 시 인터랙션 / GSAP 타임라인을 통한 자연스러운 섹션 트랜지션  
+
+</div> 
+
+
+     
     `,
     3: `
-      <h2>UggBooks UX/UI 개발</h2>
+      <h2>독서 관리 솔루션 UGGBOOKS </h2> 
       <div style="width:600px;max-width:100%;margin:1.5rem auto;">
         <iframe width="600" height="338"
           src="img/ugg_final.mp4"
-          title="UggBooks UX/UI 영상"
+          title="UGGBOOKS UX/UI 영상"
           frameborder="0"
           allowfullscreen
           style="display:block;margin:0 auto;border-radius:16px;">
         </iframe>
       </div>
       <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
-        <a href="#" target="_blank" class="btn btn-primary">프로토타입</a>
+        <a href="#" target="_blank" class="btn btn-primary">앱 사용해보기 </a>  
+        <a href="#" target="_blank" class="btn btn-primary">디자인</a>
         <a href="#" target="_blank" class="btn btn-secondary">기획서</a>
-        <a href="#" target="_blank" class="btn btn-project">디자인</a>
+   
       </div>
-      <p style="margin-top:1.5rem;">
-        독서 관리 솔루션 UggBooks의 UX/UI를 개발하여 Figma 프로토타입으로 구현.<br>
-        사용자 중심의 인터페이스 설계.
-      </p>
+   <div style="width:600px; padding-top:40px; margin:auto; font-size:1.2rem; line-height:3.6rem; color:#b8b8d1;">
+  <h4 style="background-color:#f6c445; color:#333;">프로젝트 명칭 및 개요 : 독서 관리 솔루션 UGGBOOKS </h4>
+  <h4 style="background-color:#f6c445; color:#333;">기술 스택 : FIGMA / Adobe Tools </h4>  
+  <h4>프로젝트 목표: 모바일 앱 개발을 전제로 독서 완독을 지원하는 모바일 UX를 개발하였으며, 아이디어 구상 및 기획부터 피그마 디자인 및 프로토타입까지 완성! </h4>     
+  <h4>주요 성능 : 사용자가 원하는 도서의 등록, 독서 타이머, 완독률 관리, 통계까지 독서 애호가의 모든 니즈를 포함할 수 있는 UX 개발 <br> 
+  향후 API 연동을 포함한 추가 개발을 통해 실제 Application 개발이 가능하도록 준비 완료 </h4>   
+</div> 
     `
   };
 
     // 모달 오픈/클로즈 로직
-    btns.forEach((btn, idx) => {
-        btn.addEventListener('click', function () {
-            const projectNum = idx + 1;
-            modalBody.innerHTML = projectContents[projectNum] || '<p>프로젝트 정보를 찾을 수 없습니다.</p>';
-            modal.classList.add('open');
-            modal.style.display = 'flex'; // display를 flex로 변경
-            document.body.style.overflow = 'hidden';
+        btns.forEach((btn, idx) => {
+                btn.addEventListener('click', function () {
+                        const projectNum = idx + 1;
+                        modalBody.innerHTML = projectContents[projectNum] || '<p>프로젝트 정보를 찾을 수 없습니다.</p>';
+                        modal.classList.add('open');
+                        modal.style.display = 'flex'; // display를 flex로 변경
+                        document.body.style.overflow = 'hidden';
+                });
         });
-    });
+
+        // 동적으로 생성된 .btn-project 클릭 시 Figma 임베드 모달 오픈 (이벤트 위임)
+        modalBody.addEventListener('click', function(e) {
+            // '기획서' 버튼 (프로젝트 1)
+            if (e.target && e.target.classList.contains('btn-project')) {
+                e.preventDefault();
+                showFigmaEmbedModal('https://embed.figma.com/slides/bquYeDgDzDgJVoBVNSUhRK/freesia-%EC%95%B1-%EA%B0%9C%EB%B0%9C-%EA%B8%B0%ED%9A%8D%EC%84%9C?node-id=1-483&embed-host=share');
+            }
+            // '앱 사용해보기' 버튼 (프로젝트 3) 임베드 
+       
+            if (
+                e.target &&
+                e.target.classList.contains('btn-primary') &&
+                e.target.textContent.trim().replace(/\s/g, '') === '앱사용해보기'
+            ) {
+                e.preventDefault();
+                showFigmaEmbedModal('https://embed.figma.com/proto/SHBc2P07i1OSeKhpi6G8PS/UGGBOOKS_FInal?page-id=1%3A5908&node-id=1-10501&viewport=80%2C103%2C0.2&scaling=scale-down&content-scaling=fixed&embed-host=share', true);
+            }
+            // '디자인' 버튼 (프로젝트 3)
+            if (e.target && e.target.classList.contains('btn-primary') && e.target.textContent.trim() === '디자인') {
+                e.preventDefault();
+                showFigmaEmbedModal('https://embed.figma.com/design/SHBc2P07i1OSeKhpi6G8PS/UGGBOOKS_FInal?node-id=1-5908&embed-host=share');
+            }
+            // '기획서' 버튼 (프로젝트 3)
+            if (e.target && e.target.classList.contains('btn-secondary') && e.target.textContent.trim() === '기획서') {
+                e.preventDefault();
+                showFigmaEmbedModal('https://embed.figma.com/slides/qu1GvYwwqrc5RZ4Ijfgmk5/%EA%B8%B0%ED%9A%8D%EC%84%9C-PPT?node-id=1-198&embed-host=share');
+            }
+        });
+
+        // Figma 임베드 모달 생성 및 표시 함수   
+        function showFigmaEmbedModal(figmaEmbedUrl, showGuide) {
+            let figmaModal = document.getElementById('figma-embed-modal');
+            const guideHtml = showGuide ? `<div style="position:absolute;top:18px;right:60px;font-size:1rem;color:#222;background:rgba(255,255,255,0.95);padding:0.5rem 1.2rem;border-radius:18px;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;">확대 버튼을 눌러 앱을 사용해보세요</div>` : '';
+            if (!figmaModal) {
+                figmaModal = document.createElement('div');
+                figmaModal.id = 'figma-embed-modal';
+                figmaModal.style.cssText = 'display:flex;position:fixed;z-index:10001;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.7);align-items:center;justify-content:center;';
+                figmaModal.innerHTML = `
+                        <div style="background:#fff;padding:2rem;border-radius:16px;max-width:90vw;max-height:90vh;position:relative;">
+                            <button id="figma-modal-close" style="position:absolute;top:10px;right:10px;font-size:1.5rem;background:none;border:none;cursor:pointer;">&times;</button>
+                            ${guideHtml}
+                            <iframe id="figma-iframe" width="800" height="450" style="max-width:80vw;max-height:70vh;border-radius:12px;border:none;border: 1px solid rgba(0, 0, 0, 0.1);" allowfullscreen></iframe>
+                        </div>
+                    `;
+                    document.body.appendChild(figmaModal);
+            } else {
+                // 가이드 텍스트 동적 업데이트
+                const modalContent = figmaModal.querySelector('div');
+                if (modalContent) {
+                    let guideDiv = modalContent.querySelector('.figma-guide-text');
+                    if (showGuide) {
+                        if (!guideDiv) {
+                            guideDiv = document.createElement('div');
+                            guideDiv.className = 'figma-guide-text';
+                            guideDiv.style.cssText = 'position:absolute;top:18px;right:60px;font-size:1rem;color:#222;background:rgba(255,255,255,0.95);padding:0.5rem 1.2rem;border-radius:18px;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-weight:600;';
+                            guideDiv.textContent = '확대 버튼을 눌러 앱을 직접 사용해보세요'; 
+                            modalContent.appendChild(guideDiv);
+                        }
+                    } else if (guideDiv) {
+                        guideDiv.remove();
+                    }
+                }
+            }
+            document.getElementById('figma-iframe').src = figmaEmbedUrl;
+            figmaModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Figma 모달 닫기 이벤트
+        document.addEventListener('click', function(e) {
+                const figmaModal = document.getElementById('figma-embed-modal');
+                if (!figmaModal) return;
+                if (e.target && (e.target.id === 'figma-modal-close' || e.target === figmaModal)) {
+                        figmaModal.style.display = 'none';
+                        document.body.style.overflow = '';
+                        document.getElementById('figma-iframe').src = '';
+                }
+        });
 
     // 닫기 버튼
     closeBtn.addEventListener('click', function () {
