@@ -110,25 +110,10 @@ document.addEventListener('DOMContentLoaded', function () {
             애니메이션과 gif 영상을 통해 동적이고 에너지 넘치는 제품 이미지를 구현하였습니다. 
              헤더 부분의 애니메이션은 Premire Pro와 After Effect로 제작하였습니다. 결과물을 웹퍼플리싱으로 구현하였습니다.   </h4>
              <h4> 기술 스택 : Photoshop, Illustration, After Effect, Premire Pro, HTML/CSS </h4>    
-        </div>
-    `;
+        </div>`
+    ;
    const projectContent5 = `
-        <h2>세럼(화장품)</h2> 
-        <div style="width:600px;max-width:100%;margin:1.5rem auto;text-align:center;">
-            <iframe width="100%" height="auto" loading="lazy" src="img/serum_07.mp4" title="세럼 영상" frameborder="0" 
-            allowfullscreen style="display:block; width:80%; height:auto; aspect-ratio:16/9; max-width:80%; margin:0 auto; border-radius:16px;"></iframe>
-        </div>
-        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
-            <a href="https://nicky202505.github.io/project07/" target="_blank" class="btn btn-primary">상세페이지 보기</a>
-            <a href="https://github.com/nicky202505/project07" target="_blank" class="btn btn-secondary">GitHub</a>
-        </div>
-        <div style="width:100%; padding-top:40px; margin:auto; font-size:1.1rem; line-height:2rem; color:#b8b8d1;">
-            <h4>프로젝트 개요: 화장품 스타트업 벨루시아의 세럼 브랜드 SIALAB의 상세페이지입니다.   </h4>
-             <h4> 기술 스택 : Photoshop,FIGMA, AI Tools, HTML/CSS </h4>     
-        </div>
-    `;
-    const projectContent6 = ` 
-        <h2>미니 양배추 상세페이지 </h2>
+           <h2>미니 양배추 상세페이지 </h2>
         <div style="width:600px;max-width:100%;margin:1.5rem auto;text-align:center;">  
         <img src="img/bechu2.png" alt="미니 양배추 상세페이지" style="width:80%; height:auto; border-radius:16px;">
         
@@ -143,6 +128,27 @@ document.addEventListener('DOMContentLoaded', function () {
             <h4>기술 스택 : Photoshop, FIGMA</h4>  
         </div>  
     `;
+   
+   
+   
+  
+    const projectContent6 = ` 
+         
+        <h2>세럼(화장품)</h2> 
+        <div style="width:600px;max-width:100%;margin:1.5rem auto;text-align:center;">
+            <iframe width="100%" height="auto" loading="lazy" src="img/serum_07.mp4" title="세럼 영상" frameborder="0" 
+            allowfullscreen style="display:block; width:80%; height:auto; aspect-ratio:16/9; max-width:80%; margin:0 auto; border-radius:16px;"></iframe>
+        </div>
+        <div style="display:flex;justify-content:center;gap:1rem;margin-top:1.5rem;">
+            <a href="https://nicky202505.github.io/project07/" target="_blank" class="btn btn-primary">상세페이지 보기</a>
+            <a href="https://github.com/nicky202505/project07" target="_blank" class="btn btn-secondary">GitHub</a>
+        </div>
+        <div style="width:100%; padding-top:40px; margin:auto; font-size:1.1rem; line-height:2rem; color:#b8b8d1;">
+            <h4>프로젝트 개요: 화장품 스타트업 벨루시아의 세럼 브랜드 SIALAB의 상세페이지입니다.   </h4>
+             <h4> 기술 스택 : Photoshop,FIGMA, AI Tools, HTML/CSS </h4>     
+        </div>
+    `;
+    
     // 객체로 묶어서 기존 로직 호환
     const projectContents = {
         1: projectContent1,
